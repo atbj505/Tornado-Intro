@@ -7,5 +7,10 @@
     "args": [
         "${file}"
     ],
+    "options": {
+        "env": {
+            "PYTHONIOENCODING": "UTF-8"
+        }
+    },
     "showOutput": "always"
 }
