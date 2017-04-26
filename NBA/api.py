@@ -7,7 +7,7 @@ from match import Match
 
 Match_List_Url = 'http://bifen4m.qiumibao.com/json/list.htm'
 Match_Info_Url = 'http://bifen4pc2.qiumibao.com/json/%s/%s.htm'
-Match_Max_Sid_Url = 'http://dingshi4pc.qiumibao.com/livetext/data/cache/max_sid/%s/0.htm'
+Match_Sid_Url = 'http://dingshi4pc.qiumibao.com/livetext/data/cache/max_sid/%s/0.htm'
 Match_Living_Url = 'http://dingshi4pc.qiumibao.com/livetext/data/cache/livetext/%s/0/lit_page_2/%d.htm'
 
 
@@ -29,21 +29,22 @@ def match_info_request(url, match_id):
     return mathInfo
 
 
-def match_max_sid_request(url, match_id):
+def match_sid_request(url, match_id):
     response = requests.get(url % match_id)
     return int(response.text)
 
 
 def match_living_request(url, match_id, match_sid):
-    pass
+    response = requests.get(url % (match_id, match_sid))
+    responseJson = json.loads(response.text)
 
 
 def main():
     matchList = match_list_request(Match_List_Url)
     match = matchList[0]
     matchInfo = match_info_request(Match_Info_Url, match.id)
-    matchMaxSid = match_max_sid_request(Match_Max_Sid_Url, match.id)
-    print(matchMaxSid)
+    matchSid = match_sid_request(Match_Sid_Url, match.id)
+    match_living_request(Match_Living_Url, match.id, matchSid)
 
 
 if __name__ == '__main__':
