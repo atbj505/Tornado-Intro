@@ -22,7 +22,7 @@ def get_match():
 def get_match_text(match_id):
     currentSid = 0
     sid_set = set()
-    while(True):
+    while True:
         sid = api.match_sid_request(match_id)
         if currentSid == sid:
             continue
