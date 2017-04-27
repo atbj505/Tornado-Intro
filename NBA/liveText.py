@@ -3,6 +3,7 @@ class LiveText:
         self.home_score = kwargs['home_score']
         self.visit_score = kwargs['visit_score']
         self.live_text = kwargs['live_text']
+        self.live_sid = kwargs['live_sid']
 
         self.period_cn = match_info['period_cn']
         self.home_team = match_info['home_team']

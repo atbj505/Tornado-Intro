@@ -21,6 +21,7 @@ def get_match():
 
 def get_match_text(match_id):
     currentSid = 0
+    sid_set = set()
     while(True):
         sid = api.match_sid_request(match_id)
         if currentSid == sid:
@@ -29,7 +30,9 @@ def get_match_text(match_id):
         currentSid = sid
         liveTexts = api.match_living_request(match_id, currentSid)
         for liveText in liveTexts:
-            print(liveText)
+            if liveText.live_sid not in sid_set:
+                print(liveText)
+            sid_set.add(liveText.live_sid)
 
 
 def main():
