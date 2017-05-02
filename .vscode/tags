@@ -8,8 +8,8 @@ Application	../Burksbook/main.py	/^class Application(tornado.web.Application):$/
 IndexHandler	../Template/main.py	/^class IndexHandler(tornado.web.RequestHandler):$/;"	kind:class	line:13
 IndexHandler	../hello.py	/^class IndexHandler(tornado.web.RequestHandler):$/;"	kind:class	line:14
 IndexHandler	../poemmaker/poemmaker.py	/^class IndexHandler(tornado.web.RequestHandler):$/;"	kind:class	line:16
-Live	../NBA/api.py	/^from live import Live$/;"	kind:namespace	line:7
-Live	../NBA/live.py	/^class Live:$/;"	kind:class	line:1
+LiveText	../NBA/api.py	/^from liveText import LiveText$/;"	kind:namespace	line:7
+LiveText	../NBA/liveText.py	/^class LiveText:$/;"	kind:class	line:1
 MainHandler	../Burksbook/main.py	/^class MainHandler(tornado.web.RequestHandler):$/;"	kind:class	line:24
 Match	../NBA/api.py	/^from match import Match$/;"	kind:namespace	line:6
 Match	../NBA/match.py	/^class Match:$/;"	kind:class	line:1
@@ -22,9 +22,9 @@ PoemPageHandler	../poemmaker/poemmaker.py	/^class PoemPageHandler(tornado.web.Re
 ReverseHandler	../string_server.py	/^class ReverseHandler(tornado.web.RequestHandler):$/;"	kind:class	line:15
 WrapHandler	../string_server.py	/^class WrapHandler(tornado.web.RequestHandler):$/;"	kind:class	line:20
 __init__	../Burksbook/main.py	/^    def __init__(self):$/;"	kind:member	line:13
-__init__	../NBA/live.py	/^    def __init__(self, **kwargs):$/;"	kind:member	line:2
+__init__	../NBA/liveText.py	/^    def __init__(self, match_info, **kwargs):$/;"	kind:member	line:2
 __init__	../NBA/match.py	/^    def __init__(self, **kwargs):$/;"	kind:member	line:2
-__repr__	../NBA/live.py	/^    def __repr__(self):$/;"	kind:member	line:7
+__repr__	../NBA/liveText.py	/^    def __repr__(self):$/;"	kind:member	line:12
 __repr__	../NBA/match.py	/^    def __repr__(self):$/;"	kind:member	line:10
 api	../NBA/nba.py	/^import api$/;"	kind:namespace	line:1
 api.py	../NBA/api.py	1;"	kind:file	line:1
@@ -41,6 +41,7 @@ get	../poemmaker/poemmaker.py	/^    def get(self):$/;"	kind:member	line:17
 get	../string_server.py	/^    def get(self, input):$/;"	kind:member	line:16
 get_match	../NBA/nba.py	/^def get_match():$/;"	kind:function	line:4
 get_match_list	../NBA/nba.py	/^    def get_match_list():$/;"	kind:function	line:5
+get_match_text	../NBA/nba.py	/^def get_match_text(match_id):$/;"	kind:function	line:22
 hello.py	../hello.py	1;"	kind:file	line:1
 httpserver	../Burksbook/main.py	/^import tornado.httpserver$/;"	kind:namespace	line:2
 httpserver	../Template/main.py	/^import tornado.httpserver$/;"	kind:namespace	line:4
@@ -53,10 +54,10 @@ ioloop	../poemmaker/poemmaker.py	/^import tornado.ioloop$/;"	kind:namespace	line
 iostream	../hello.py	/^import tornado.iostream$/;"	kind:namespace	line:5
 iostream	../string_server.py	/^import tornado.iostream$/;"	kind:namespace	line:7
 json	../NBA/api.py	/^import json$/;"	kind:namespace	line:1
-live.py	../NBA/live.py	1;"	kind:file	line:1
+liveText.py	../NBA/liveText.py	1;"	kind:file	line:1
 main	../Burksbook/main.py	/^def main():$/;"	kind:function	line:33
-main	../NBA/api.py	/^def main():$/;"	kind:function	line:51
-main	../NBA/nba.py	/^def main():$/;"	kind:function	line:21
+main	../NBA/api.py	/^def main():$/;"	kind:function	line:54
+main	../NBA/nba.py	/^def main():$/;"	kind:function	line:38
 main	../Template/main.py	/^def main():$/;"	kind:function	line:36
 main	../hello.py	/^def main():$/;"	kind:function	line:20
 main	../poemmaker/poemmaker.py	/^def main():$/;"	kind:function	line:31
