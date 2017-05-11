@@ -9,14 +9,14 @@ def get_match():
         return match_list
 
     match_list = get_match_list()
-    match_id = input('输入比赛ID:')
+    if len(match_list):
+        match_id = input('输入比赛ID:')
 
-    for match in match_list:
-        if match_id == match.id:
-            return match_id
-        else:
-            print('输入ID有误')
-            return 0
+        for match in match_list:
+            if match_id == match.id:
+                return match_id
+    print('当前无比赛')
+    return 0
 
 
 def get_match_text(match_id):
